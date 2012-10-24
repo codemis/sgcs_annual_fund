@@ -126,7 +126,7 @@ h5 {
 	font-weight: 300;
 }
 a {
-	color: #d98f38;
+	color: #ed1922;
 	text-decoration: none;
 	cursor: pointer;
 	font-style: normal;
@@ -240,7 +240,7 @@ em {
 	float: left;
 }
 .icon_bg {
-	background: #ce7171;
+	background: #ed1922;
 	width: 32px;
 	height: 32px;
 	border-radius: 0px 32px 32px 32px;
@@ -249,7 +249,7 @@ em {
 }
 .icon-intext, .icon-intext a {
 	font-size: 16px;
-	color: #d98f38;
+	color: #ed1922;
 	font-weight: 600;
 	padding-bottom: 0px;
 	line-height: 1.7em;
@@ -282,7 +282,7 @@ em {
 .logo-wrapper {
 	background: #ffffff;
 	padding: 20px 20px 15px 20px;
-	border-bottom: 1px solid #d9e0e3;
+	border-bottom: 1px solid #ed1922;
 }
 .logo {
 	line-height: 1em;
