@@ -323,7 +323,7 @@ em {
 /*----- header-right -----*/
 /*contact-top*/
 .contact-top {
-	padding: 40px 20px 37px 20px; /*top padding for 'contact-top' = 20px + top padding for '.logo-wrapper p'  ---&--- tweak bottom padding so that will reach to equal height as '.logo-wrapper'*/
+	padding: 10px 30px 67px 10px; /*top padding for 'contact-top' = 20px + top padding for '.logo-wrapper p'  ---&--- tweak bottom padding so that will reach to equal height as '.logo-wrapper'*/
 }
 /*social*/
 .social {
