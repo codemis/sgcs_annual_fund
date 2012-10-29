@@ -49,7 +49,22 @@
         <p>Our Annual Fund goal for 2012–2013 is $125,000 with 100% family participation. We also encourage those in the community who believe in the mission of SGCS to generously participate as well.</p>
 
         <p>Your tax-deductible gift will play such an important role in the future of SGCS. The links on this page make it possible to give a one-time gift to the Annual Fund, or to make a monthly contribution. Thank you for your generous support.</p>
-      <a href="#" class="btn"><span>Donate Now</span></a>
+        <form action="index_submit" method="post" accept-charset="utf-8" id="donate-form">
+          <h3>How You Can Help Us Fundraise</h3>
+					<p id="one-time-gift-wrapper">
+					   <input type="radio" name="giftType" value="One Time Gift" id="choose-one-time" checked="checked">
+					   <span>One time donation</span>
+					</p>	
+					<p id="monthly-gift-wrapper">
+					   <input type="radio" name="giftType" value="Monthly Gift" id="choose-monthly">
+					   <span>Monthly donation</span>						
+					</p>		
+					<p id="donation-amount" class="clearfix">
+						<label for="d-amount">Amount</label>
+						<input id="d-amount" name="d-amount" type="text" placeholder="e.g. 10, 20, 100.. " onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'e.g. 10, 20, 100.. ':this.value;">
+					</p>
+          <a href="#" class="btn"><span>Donate Now</span></a>
+        </form>
     </div>
     <!--header-middle ends--> 
     

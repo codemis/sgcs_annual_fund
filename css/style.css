@@ -539,7 +539,7 @@ ul.gallery li a span img {
 	left: 0;
 }
 /*----- contact form -----*/
-#contactform input, #contactform textarea {
+input, textarea {
 	background: #ffffff;
 	width: 198px;
 	height: 18px;
@@ -556,10 +556,28 @@ ul.gallery li a span img {
 	-webkit-border-radius: 6px;
 	display: block;
 }
-#contactform textarea {
+#donate-form input[type=radio] {
+	display: inline;
+	height: auto;
+	width: auto;
+}
+#donate-form input[type=text] {
+	display: inline;
+	height: auto;
+	width: 285px;
+}
+#donate-form .btn{
+	float: none;
+	margin: 0px !important;
+}
+#donate-form {
+	border-top: 1px solid #ED1922;
+	padding-top: 10px;
+}
+textarea {
 	height: 58px;
 }
-#contactform input.submit {
+input.submit {
 	background: #828282; /* for non-css3 browsers */
  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9c9c9c', endColorstr='#828282'); /* for IE */
 	background: -webkit-gradient(linear, left top, left bottom, from(#9c9c9c), to(#828282)); /* for webkit browsers */
@@ -584,10 +602,10 @@ ul.gallery li a span img {
 	box-shadow: 0 1px 1px 0px rgba(255, 255, 255, .8) inset;
 }
 /*error*/
-#contactform label.error {
+label.error {
 	display: none !important;
 }
-#contactform input.error, #contactform textarea.error {
+input.error, textarea.error {
 	border: 1px solid #dc8f89;
 }
 #result {
@@ -763,4 +781,15 @@ margin-bottom: 10px;
 ul.gallery li.first img {
 	display: none;
 }
+}
+
+p#one-time-gift-wrapper {
+	float: left;
+	width: 50%;
+}
+p#monthly-gift-wrapper {
+	float: left;
+	width: 49%;
+	margin-left: 1%;
+	clear: right;
 }
