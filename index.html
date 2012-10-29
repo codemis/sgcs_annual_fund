@@ -117,13 +117,16 @@
         <form  id="contactform" method="post" action="submit-form.php">
           <fieldset>
             <div class="four columns alpha">
-              <p>
+              <p class="name-input">
                 <input name="name" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Name':this.value;" value="Name"/>
               </p>
-              <p>
+              <p class="phone-input">
+                <input name="phone" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Name':this.value;" value="Phone"/>
+              </p>
+              <p class="email-input">
                 <input name="email" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Email':this.value;" value="Email" class="required email"/>
               </p>
-              <p>
+              <p class="subject-input">
                 <input name="subject" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Subject':this.value;" value="Subject">
               </p>
             </div>
