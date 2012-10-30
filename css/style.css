@@ -793,3 +793,13 @@ p#monthly-gift-wrapper {
 	margin-left: 1%;
 	clear: right;
 }
+.white {
+	background-color: #fff;
+	background-image: none;
+}
+.donation-summary {
+	min-height: 500px;
+}
+dd{
+	font-weight: bold;
+}
