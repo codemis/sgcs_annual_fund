@@ -96,7 +96,7 @@ class PaypalProcessing
  */
     $requestParams = array( 'RETURNURL'   => "$this->domain/ConfirmDonation.php",
                             'CANCELURL'   => "$this->domain/?donation=cancelled",
-                            'LOGOIMG'     =>  "$this->domain/images/logo.png",
+                            'LOGOIMG'     =>  "$this->domain/images/logo_120X60.png",
                             'LANDINGPAGE' => "Billing",
                             'NOSHIPPING'  => 1
     );
