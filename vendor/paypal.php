@@ -1,4 +1,10 @@
 <?php
+/**
+ * A class for communicating with Paypal's API
+ * 
+ * @link http://coding.smashingmagazine.com/2011/09/05/getting-started-with-the-paypal-api/
+ * @author Johnathan Pulos
+ */
 require_once('PaypalSettings.inc.php');
 class Paypal {
 /**
