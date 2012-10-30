@@ -803,3 +803,8 @@ p#monthly-gift-wrapper {
 dd{
 	font-weight: bold;
 }
+div.error-msg p{
+	color: #ED1922;
+	font-style: italic;
+	padding: 0px;
+}
