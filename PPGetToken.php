@@ -5,21 +5,20 @@
  * @author Johnathan Pulos
  */
 require_once("vendor/PaypalProcessing.php");
+/**
+ * set the checkout environment (ie. sandbox or live)
+ *
+ * @author Johnathan Pulos
+ */
+$environment = "sandbox";
 $donation = $_POST["d-amount"];
 $donationType = $_POST["gift-type"];
 if(($donation != "") && ($donationType != ""))
 {
   $paypalProcessing = new PaypalProcessing($donation, $donationType);
-  $paypalProcessing->paypalEnvironment = "sandbox";
+  $paypalProcessing->paypalEnvironment = $environment;
   $token = $paypalProcessing->setupCheckout();
-  /**
-   * Set the url for paypal redirect
-   * sandbox = https://www.sandbox.paypal.com
-   * paypal = https://www.paypal.com
-   *
-   * @author Johnathan Pulos
-   */
-  $paypalUrl = 'https://www.sandbox.paypal.com';
+  $paypalUrl = ($environment == 'sandbox') ? "https://www.sandbox.paypal.com" : "https://www.paypal.com";
   header("Location: $paypalUrl/webscr&cmd=_express-checkout&token=$token");
   exit;
 } else{
