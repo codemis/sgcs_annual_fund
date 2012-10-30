@@ -115,7 +115,7 @@ if(isset($_POST['donation_confirmed']))
           <input type="hidden" name="token" value="<?php echo $token; ?>">
           <input type="hidden" name="PayerID" value="<?php echo $payerId; ?>">
           <input type="hidden" name="donation_confirmed" value="true">
-          <a href="" class="btn" id="donate-link"><span>Complete Donation</span></a>
+          <a href="" class="btn form-process-button" id="donate-link"><span>Complete Donation</span></a>
         </form>
       </div>
       <div class="clear"></div>

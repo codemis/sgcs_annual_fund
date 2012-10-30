@@ -180,10 +180,10 @@ em {
 	text-decoration: none;
 	float: left;
 }
-.btn:hover span {
+.btn:hover span, .btn.disabled span {
 	background-position: 0 -49px;
 }
-.btn:hover {
+.btn:hover, .btn.disabled {
 	background-position: right -49px;
 	text-decoration: none;
 }
