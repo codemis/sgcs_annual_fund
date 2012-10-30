@@ -48,9 +48,10 @@ class PaypalProcessing
  * @access public
  * @author Johnathan Pulos
  */
-  public function __construct($donation, $donationType)
+  public function __construct($donation, $donationType, $paypalEnvironment = "sandbox")
   {
-    $this->paypal = new Paypal();
+    $this->paypalEnvironment = strtolower($paypalEnvironment);
+    $this->paypal = new Paypal($this->paypalEnvironment);
     $this->setDonation($donation);
     $this->setDonationType($donationType);
   }
