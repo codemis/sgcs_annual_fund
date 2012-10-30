@@ -5,7 +5,7 @@
  * @author Johnathan Pulos
  */
 require_once('vendor/paypal.php');
- $website = 'http://sgccfund.local';
+$website = 'http://sgccfund.local';
 /**
  * Check that the token exists
  *
