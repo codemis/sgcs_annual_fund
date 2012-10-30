@@ -5,6 +5,15 @@
  * @author Johnathan Pulos
  */
 require_once('vendor/paypal.php');
+$website = 'http://sgccfund.local';
+/**
+ * Strip dollar signs
+ *
+ * @author Johnathan Pulos
+ */
+$donation = preg_replace('/[^0-9.]*/','', $_POST['d-amount']);
+$giftType = $_POST['gift-type'];
+$giftTypeText = ($giftType == 'monthly') ? 'Monthly' : 'One Time';
 /**
  * Set the url for paypal redirect
  * sandbox = https://www.sandbox.paypal.com
@@ -19,8 +28,11 @@ $paypalUrl = 'https://www.sandbox.paypal.com';
  * @author Johnathan Pulos
  */
 $requestParams = array(
-   'RETURNURL' => 'http://sgccfund.local/PPCompleteDonation.php',
-   'CANCELURL' => 'http://sgccfund.local/?donation=cancelled'
+   'RETURNURL' => "$website/PPCompleteDonation.php",
+   'CANCELURL' => "$website/?donation=cancelled",
+   'LOGOIMG'   =>  "$website/images/logo.png",
+   'LANDINGPAGE' => "Billing",
+   'NOSHIPPING' => 1
 );
 /**
  * Setup the order parameters
@@ -28,17 +40,22 @@ $requestParams = array(
  * @author Johnathan Pulos
  */
 $orderParams = array(
-   'PAYMENTREQUEST_0_AMT' => '500',
+   'PAYMENTREQUEST_0_AMT' => $donation,
    'PAYMENTREQUEST_0_SHIPPINGAMT' => '0',
    'PAYMENTREQUEST_0_CURRENCYCODE' => 'USD',
-   'PAYMENTREQUEST_0_ITEMAMT' => '500'
+   'PAYMENTREQUEST_0_ITEMAMT' => $donation
 );
 $item = array(
    'L_PAYMENTREQUEST_0_NAME0' => 'Donation',
-   'L_PAYMENTREQUEST_0_DESC0' => 'Annual Fund Drive',
-   'L_PAYMENTREQUEST_0_AMT0' => '500',
-   'L_PAYMENTREQUEST_0_QTY0' => '1'
+   'L_PAYMENTREQUEST_0_DESC0' => "Annual Fund Drive: $giftTypeText Gift",
+   'L_PAYMENTREQUEST_0_AMT0' => $donation,
+   'L_PAYMENTREQUEST_0_QTY0' => '1',
+   'PAYMENTREQUEST_0_CUSTOM'  => "$giftType"
 );
+if($giftType == 'monthly') {
+ $item['L_BILLINGTYPE0'] = 'RecurringPayments';
+ $item['L_BILLINGAGREEMENTDESCRIPTION0'] = "Annual Fund Drive: $giftTypeText Gift";
+}
 /**
  * Process the order
  *
