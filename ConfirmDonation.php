@@ -97,6 +97,7 @@ if(isset($_POST['donation_confirmed']))
 <div id="wrapper"> 
   <div class="row white donation-summary">
       <div class="container">
+        <img src="images/logo.png" width="200" height="100" alt="SGCS Annual Fund">
         <h3>Confirm Your Donation to SGCS Annual Fund</h3>
         <p>Thank you for your donation.  In order to complete your donation,  please review the donation information below, and click the <strong>"Complete Donation"</strong> Button.  Your donation will not be sent,  if you do not click the button.</p>
         <dl>
