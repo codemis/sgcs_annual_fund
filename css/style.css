@@ -820,3 +820,10 @@ div.error-msg p{
 .topbar.error { 
     background-color: #990000;
 }
+p.ministry-tagline {
+	font-style: italic;
+	font-size: 12px;
+	padding-bottom: 0px;
+	position: relative;
+	bottom: -18px;
+}

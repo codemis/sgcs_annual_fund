@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 		}
 		if($('input#d-amount').length > 0) {
 			var donateAmount = $('input#d-amount').val();
-			if((donateAmount == '') || (donateAmount == 'e.g. 10, 20, 100.. ')) {
+			if((donateAmount == '') || (donateAmount == 'e.g. 100, 500, 5000...')) {
 				$('div#donate-error-msg').html('<p>Please provide a donation amount.</p>');
 				$('input#d-amount').addClass('error');
 				return false;

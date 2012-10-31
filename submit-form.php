@@ -10,7 +10,7 @@ if($_POST['phone'] != '') {
 }
 
 
-$to='ggolden@sgucandcs.org';
+$to='khalverson@sgccandcs.org';
 //$to='johnathan@missionaldigerati.org';
 
 $headers = 'From: '.$name."\r\n" .
