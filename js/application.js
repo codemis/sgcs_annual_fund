@@ -20,4 +20,23 @@ jQuery(document).ready(function($) {
 		link.parent('form').submit();
 		return false;
 	});
+	var donation = $.url().param('donation');
+	if(donation == 'complete') {
+		window.setTimeout(function(){
+			topBar('Thank You!  Your donation has been processed.  Please take a moment a share this website with your friends.', false);
+		}, 1500);
+	}else if(donation == 'error') {
+		window.setTimeout(function(){
+			topBar('Sorry,  your order has had an error.  Please contact us below, or try again later.', true);
+		}, 1500);
+	}
 });
+/**
+ * add a topBar message
+ * @param String message teh message to display
+ * @return void 
+ */
+function topBar(message, isError) {
+	var divClass = (isError === true) ? 'topbar error' : 'topbar';
+  $("<div />",{'class': divClass, text: message}).hide().prependTo("body").slideDown('fast').delay(6000).slideUp(function() {$(this).remove();});
+};

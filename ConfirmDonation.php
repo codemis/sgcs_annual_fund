@@ -164,7 +164,7 @@ if(isset($_POST['donation_confirmed']))
 <script src="js/jquery.validate.js" type="text/javascript"></script> 
 <script src="js/jquery.form.js" type="text/javascript"></script> 
 <script src="js/fitvids.js" type="text/javascript"></script> 
-<script src="js/twitter.js" type="text/javascript"></script> 
+<script src="js/jquery.purl.min.js" type="text/javascript"></script>
 <script src="js/custom.js" type="text/javascript"></script>
 </body>
 </html>
