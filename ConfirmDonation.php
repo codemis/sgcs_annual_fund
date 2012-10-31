@@ -49,7 +49,7 @@ if(isset($_POST['donation_confirmed']))
   $paypalProcessing->newDonation($donation, $donationType, $donationDesc);
   $checkoutResponse = $paypalProcessing->completeCheckout($token, $payerId);
   $transactionId = $checkoutResponse['PAYMENTINFO_0_TRANSACTIONID'];
-  logDonation(dirname(dirname(__FILE__))."/complete_donations.csv", array($todayDate, $payerId, $donationType, $donation, $transactionId));
+  logDonation(dirname(__FILE__)."/csv_data/complete_donations.csv", array($todayDate, $payerId, $donationType, $donation, $transactionId));
   header("Location:  http://sgccfund.local/?donation=complete");
   exit;
 } else
@@ -59,7 +59,7 @@ if(isset($_POST['donation_confirmed']))
  *
  * @author Johnathan Pulos
  */
-  logDonation(dirname(dirname(__FILE__))."/pending_donations.csv", array($todayDate, $payerId, $donationType, $donation));
+  logDonation(dirname(__FILE__)."/csv_data/pending_donations.csv", array($todayDate, $payerId, $donationType, $donation));
 }
 ?>
 <!DOCTYPE html>
