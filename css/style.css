@@ -564,7 +564,7 @@ input, textarea {
 #donate-form input[type=text] {
 	display: inline;
 	height: auto;
-	width: 285px;
+	width: 65%;
 }
 #donate-form .btn{
 	float: none;
