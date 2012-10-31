@@ -1,7 +1,7 @@
 SGCSAnnualFund.org
 ==================
 
-    A website for the San Gabriel Christian School Annual Fund Raising.  Paypal integration for payment processing.
+A website for the San Gabriel Christian School Annual Fund Raising.  Paypal integration for payment processing.
 
 Development
 -----------
