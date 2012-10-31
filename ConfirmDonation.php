@@ -36,7 +36,7 @@ if(isset($_REQUEST['token']) && !empty($_REQUEST['token']))
   $oneMonthAway = $paypalProcessing->oneMonthFromNow();
 } else
 {
-  header("Location:  http://sgccfund.local/?donation=error");
+  header("Location:  http://".$_SERVER['SERVER_NAME']."/?donation=error");
   exit;
 }
 if(isset($_POST['donation_confirmed']))
@@ -50,7 +50,7 @@ if(isset($_POST['donation_confirmed']))
   $checkoutResponse = $paypalProcessing->completeCheckout($token, $payerId);
   $transactionId = $checkoutResponse['PAYMENTINFO_0_TRANSACTIONID'];
   logDonation(dirname(__FILE__)."/csv_data/complete_donations.csv", array($todayDate, $payerId, $donationType, $donation, $transactionId));
-  header("Location:  http://sgccfund.local/?donation=complete");
+  header("Location:  http://".$_SERVER['SERVER_NAME']."/?donation=complete");
   exit;
 } else
 {

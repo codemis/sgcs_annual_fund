@@ -23,7 +23,7 @@ if(($donation != "") && ($donationType != ""))
   header("Location: $paypalUrl/webscr&cmd=_express-checkout&token=$token");
   exit;
 } else{
-  header("Location: http://sgccfund.local/?donation=error");
+  header("Location: http://".$_SERVER['SERVER_NAME']."/?donation=error");
 	exit;
 }
 ?>

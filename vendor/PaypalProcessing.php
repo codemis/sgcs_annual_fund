@@ -62,6 +62,7 @@ class PaypalProcessing
   {
     $this->paypalEnvironment = strtolower($paypalEnvironment);
     $this->paypal = new Paypal($this->paypalEnvironment);
+    $this->domain = "http://".$_SERVER['SERVER_NAME'];
   }
   
   /**
