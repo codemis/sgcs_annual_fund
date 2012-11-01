@@ -10,7 +10,7 @@ require_once("vendor/PaypalProcessing.php");
  *
  * @author Johnathan Pulos
  */
-$environment = "sandbox";
+$environment = "live";
 $donation = $_POST["d-amount"];
 $donationType = $_POST["gift-type"];
 if(($donation != "") && ($donationType != ""))

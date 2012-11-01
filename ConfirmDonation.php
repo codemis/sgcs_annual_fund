@@ -16,7 +16,7 @@ function logDonation($file, $data)
  *
  * @author Johnathan Pulos
  */
-$environment = "sandbox";
+$environment = "live";
 $todayDate = date("Y-m-d");
 $paypalProcessing = new PaypalProcessing($environment);
 /**
@@ -118,6 +118,8 @@ if(isset($_POST['donation_confirmed']))
           <input type="hidden" name="donation_confirmed" value="true">
           <a href="" class="btn form-process-button" id="donate-link"><span>Complete Donation</span></a>
         </form>
+        <div class="clearfix"></div>
+        <p><a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/?donation=cancel"><span>Cancel Donation</span></a></p>
       </div>
       <div class="clear"></div>
     </div>
